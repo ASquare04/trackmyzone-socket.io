@@ -9,7 +9,10 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "app.js"
+      "dest": "app.js",
+      "headers": {
+        "Content-Security-Policy": "default-src 'none'; script-src 'self' 'unsafe-inline'; font-src 'self' <font-source>;"
+      }
     }
   ]
 }
